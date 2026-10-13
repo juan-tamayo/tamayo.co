@@ -1,158 +1,245 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#222424">
-  <title>Juan Tamayo | Senior PHP & Laravel Engineer, San Diego</title>
-  <meta name="description" content="Juan Tamayo is a senior PHP and Laravel engineer in San Diego with 14+ years building web applications, APIs, WordPress platforms, and cloud infrastructure.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Juan Carlos Tamayo">
-  <meta property="og:title" content="Juan Tamayo | Senior PHP & Laravel Engineer">
-  <meta property="og:description" content="Creative development meets serious engineering. Explore selected work, platforms, and 14+ years of building for the web.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tamayo.co/">
-  <meta property="og:image" content="https://tamayo.co/assets/logo-transparent.png">
-  <meta property="og:image:width" content="576">
-  <meta property="og:image:height" content="576">
-  <meta property="og:image:alt" content="Juan Tamayo's cyan geometric logo">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="Juan Tamayo">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Juan Tamayo | Senior PHP & Laravel Engineer">
-  <meta name="twitter:description" content="Software architecture, Laravel platforms, APIs, and 14+ years of hands-on engineering in San Diego.">
-  <meta name="twitter:image" content="https://tamayo.co/assets/logo-transparent.png">
-  <meta name="twitter:image:alt" content="Juan Tamayo's cyan geometric logo">
-  <link rel="canonical" href="https://tamayo.co/">
-  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
-  <link rel="preload" href="assets/space-grotesk-bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/space-grotesk-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://tamayo.co/#website",
-        "url": "https://tamayo.co/",
-        "name": "Juan Tamayo",
-        "inLanguage": "en-US",
-        "publisher": { "@id": "https://tamayo.co/#juan" }
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://tamayo.co/#profile",
-        "url": "https://tamayo.co/",
-        "name": "Juan Tamayo | Senior PHP & Laravel Engineer, San Diego",
-        "description": "Professional portfolio of Juan Tamayo, senior PHP and Laravel engineer and software architect.",
-        "inLanguage": "en-US",
-        "isPartOf": { "@id": "https://tamayo.co/#website" },
-        "mainEntity": { "@id": "https://tamayo.co/#juan" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://tamayo.co/#juan",
-        "name": "Juan Carlos Tamayo",
-        "alternateName": "Juan Tamayo",
-        "url": "https://tamayo.co/",
-        "jobTitle": "Software Architect",
-        "description": "Senior PHP and Laravel engineer with 14+ years delivering production web applications, APIs, integrations, and multi-tenant platforms.",
-        "homeLocation": { "@type": "Place", "name": "San Diego, California" },
-        "worksFor": { "@type": "Organization", "name": "DesignStudio Network, Inc." },
-        "knowsAbout": ["PHP", "Laravel", "Software architecture", "WordPress", "Vue.js", "MySQL", "REST APIs", "Cloud infrastructure", "Automated testing", "Web accessibility"],
-        "sameAs": ["https://github.com/juan-tamayo", "https://www.linkedin.com/in/jctamayo"]
-      }
-    ]
-  }
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  try {
+    var saved = localStorage.getItem('tamayo-lang');
+    var onEs = /^\/es(\/|$)/.test(location.pathname);
+    if (!saved && /^es\b/i.test(navigator.language || '')) {
+      saved = 'es';
+      localStorage.setItem('tamayo-lang', 'es');
+    }
+    if (location.protocol !== 'file:') {
+      if (saved === 'es' && !onEs) location.replace('/es/' + location.search + location.hash);
+      else if (saved === 'en' && onEs) location.replace('/' + location.search + location.hash);
+    }
+  } catch (e) {}
+</script>
+<title>Juan Tamayo | Senior PHP &amp; Laravel Engineer</title>
+<meta name="description" content="Juan Tamayo is a senior PHP and Laravel engineer and software architect with 14+ years of experience. Laravel platforms, APIs, WordPress at scale and AI-assisted development.">
+<meta name="theme-color" content="#f1ece3" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0e0e10" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="canonical" href="https://tamayo.co/">
+<link rel="alternate" hreflang="en" href="https://tamayo.co/">
+<link rel="alternate" hreflang="es" href="https://tamayo.co/es/">
+<link rel="alternate" hreflang="x-default" href="https://tamayo.co/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_MX">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tamayo.co/">
+<meta property="og:site_name" content="Juan Tamayo">
+<meta property="og:title" content="Juan Tamayo | Senior PHP & Laravel Engineer">
+<meta property="og:description" content="Laravel platforms, APIs and WordPress at scale. 14+ years building software that keeps working.">
+<meta property="og:image" content="https://tamayo.co/assets/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Juan Tamayo, Senior PHP and Laravel Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tamayo.co/assets/og.jpg">
+<link rel="icon" href="assets/favicon.png" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/juan.webp" imagesrcset="assets/juan-sm.webp 500w, assets/juan.webp 1000w" imagesizes="(max-width: 800px) 90vw, 40vw" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/main.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Juan Carlos Tamayo","url":"https://tamayo.co/","image":"https://tamayo.co/assets/og.jpg","jobTitle":"Senior PHP and Laravel Engineer","homeLocation":{"@type":"Place","name":"San Diego, California"},"knowsAbout":["PHP","Laravel","Vue.js","WordPress","WooCommerce","REST APIs","MySQL","Docker","GitHub Actions","AI-assisted development"],"sameAs":["https://github.com/juan-tamayo","https://www.linkedin.com/in/jctamayo"]}</script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="brand-header" id="top">
-  </header>
-  <nav class="floating-dock" aria-label="Main navigation">
-    <a class="dock-home" href="#top" aria-label="Back to top" title="Back to top"><img src="assets/logo-transparent-small.webp" width="32" height="32" alt=""></a>
-    <span class="dock-divider" aria-hidden="true"></span>
-    <a class="dock-link" href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Work</span></a>
-    <a class="dock-link" href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3"/></svg><span>About</span></a>
-    <a class="dock-link" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Contact</span></a>
-    <span class="dock-divider" aria-hidden="true"></span>
-    <button class="dock-tool" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme">◐</button>
-    <button class="dock-tool" id="motion-toggle" aria-pressed="false" aria-label="Pause animations" title="Pause animations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span class="sr-only">Pause motion</span></button>
-  </nav>
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow enter">JUAN TAMAYO / SENIOR PHP & LARAVEL ENGINEER</p>
-        <h1 id="hero-title"><span class="headline-line"><span>Good ideas.</span></span><span class="headline-line"><span>Built <em>right.</em></span></span></h1>
-        <p class="hero-description enter">I bring creative thinking and serious engineering together. From a first impression to the systems behind it.</p>
-        <div class="hero-actions enter"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="assets/Juan-Tamayo-Resume.pdf" download>Get my resume <span aria-hidden="true">↓</span></a></div>
-      </div>
-      <div class="hero-art enter" aria-hidden="true">
-        <span class="art-label label-top"><span>CREATIVE MIND</span></span>
-        <div class="orbit-stage">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
-          <div class="logo-float"><img src="assets/logo-transparent.webp" alt="" width="576" height="576" fetchpriority="high" decoding="async"></div>
-          <span class="orbital-point"></span>
-        </div>
-        <span class="art-label label-bottom"><span>ENGINEER AT HEART</span></span>
-      </div>
-      <div class="hero-foot"><p>Thoughtful on the surface.<br>Powerful under the hood.</p><p>PHP / Laravel / Vue / WordPress<br><span class="muted">Building for the web since 2010</span></p></div>
-    </section>
-    <section class="impact" aria-label="Selected career impact"><div class="wrap impact-grid">
-      <div class="reveal"><strong>14<span>+</span></strong><p>years turning ideas into products</p></div>
-      <div class="reveal"><strong>300<span>+</span></strong><p>sites powered by one platform</p></div>
-      <div class="reveal"><strong>30<span>%</span></strong><p>lower infrastructure costs</p></div>
-      <div class="reveal"><strong>99.9<span>%</span></strong><p>uptime through a cloud migration</p></div>
-    </div></section>
-    <section id="work" class="work section-pad">
-      <div class="wrap">
-        <div class="section-heading reveal"><p class="eyebrow">SELECTED IMPACT</p><h2>Built to solve.<br>Designed to last.</h2><p>Real systems, real responsibility. A few highlights from 14+ years of hands-on engineering.</p></div>
-        <div class="resume-work">
-          <article class="work-story reveal"><div class="story-result"><strong>300<span>+</span></strong><p>WordPress sites. One source of truth.</p></div><div class="story-copy"><p class="eyebrow">LARAVEL / CONTENT SYNDICATION</p><h3>Publish once.<br>Reach every site.</h3><p>I built a Laravel platform that distributes real-time content updates to 300+ WordPress sites, eliminating manual site-by-site deployments. A reusable custom theme, content blocks, and plugins helped a small team deliver and maintain the network consistently.</p><ul class="story-tags"><li>Multi-site architecture</li><li>Workflow automation</li></ul></div></article>
-          <article class="work-story reveal"><div class="story-result"><strong>30<span>%</span></strong><p>Lower infrastructure costs.</p><span class="supporting-result">99.9% uptime maintained</span></div><div class="story-copy"><p class="eyebrow">CLOUD / DELIVERY / OPERATIONS</p><h3>Move the infrastructure.<br>Keep the momentum.</h3><p>I led the migration of 300+ sites to DigitalOcean and improved Docker and GitHub Actions delivery workflows, reducing infrastructure costs by 30% while maintaining 99.9% uptime.</p><ul class="story-tags"><li>DigitalOcean</li><li>Docker</li><li>GitHub Actions</li></ul></div></article>
-          <article class="work-story reveal"><div class="story-result word-result"><strong>Access<br>for all.</strong><p>Public-facing nonprofit experiences.</p></div><div class="story-copy"><p class="eyebrow">AMERICAN RED CROSS / PHP & LARAVEL</p><h3>Important work.<br>Accessible experiences.</h3><p>I developed and maintained several Laravel and PHP websites for the American Red Cross, delivering accessible public-facing experiences within enterprise brand and governance requirements.</p><ul class="story-tags"><li>Accessibility</li><li>Enterprise governance</li><li>Production support</li></ul></div></article>
-          <article class="work-story reveal"><div class="story-result word-result"><strong>All<br>connected.</strong><p>Commerce that stays in sync.</p></div><div class="story-copy"><p class="eyebrow">WOOCOMMERCE / ERP / CRM</p><h3>Less reconciliation.<br>More reliable data.</h3><p>I created WooCommerce integration layers that synchronize ERP and CRM data and live inventory for global brands, eliminating manual catalog reconciliation.</p><ul class="story-tags"><li>API integrations</li><li>Live inventory</li><li>Data synchronization</li></ul></div></article>
-        </div>
-        <div class="work-more reveal"><p>Experience drawn from my professional resume.<br>The details behind the work, all in one place.</p><a class="button outline" href="assets/Juan-Tamayo-Resume.pdf" download>Get the full resume <span aria-hidden="true">↓</span></a></div>
-      </div>
-    </section>
-    <section class="engineering section-pad wrap" aria-labelledby="engineering-title">
-      <div class="section-heading reveal"><p class="eyebrow">BEYOND THE BROWSER</p><h2 id="engineering-title">The part you don’t see.<br>The difference you feel.</h2><p>I build the architecture that keeps a great experience working long after launch.</p></div>
-      <div class="engineering-grid">
-        <article class="feature feature-platform reveal"><p class="eyebrow">MARKETPLACES & PRODUCTS</p><h3>From architecture<br>to the last detail.</h3><p>I architected and built MVP.DesignStudio.com, a Laravel marketplace and portfolio platform for freelancers, with professional profiles, digital products, role-based access, and project workflows.</p><div class="product-words" aria-label="Platform capabilities"><span>Profiles.</span><span>Products.</span><span>Permissions.</span><span>Workflows.</span></div></article>
-        <div class="engineering-side">
-          <article class="feature reveal"><p class="eyebrow">QUALITY & TECHNICAL LEADERSHIP</p><h3>Build confidence into the process.</h3><p>PHPUnit and Pest testing, code reviews, CI/CD, production monitoring, and mentoring junior and mid-level developers. AI-assisted development with human review, testing, and validation.</p></article>
-          <article class="feature reveal"><p class="eyebrow">EARLY FOUNDATIONS</p><h3>Always a builder.</h3><p>Custom PHP and MySQL applications, WordPress themes and plugins, an auction platform with proxy bidding, and community and member websites for Eco Tek Solutions and CSEA 471.</p></article>
-        </div>
-      </div>
-      <div class="capabilities reveal"><p class="eyebrow">MY TOOLKIT</p><ul aria-label="Technical skills"><li>PHP & Laravel</li><li>Vue.js</li><li>WordPress</li><li>MySQL</li><li>REST APIs</li><li>AWS & DigitalOcean</li><li>Docker</li><li>CI/CD</li><li>PHPUnit & Pest</li><li>AI-assisted workflows</li></ul></div>
-    </section>
-    <section id="about" class="about section-pad"><div class="wrap about-grid">
-      <div class="career-path reveal"><p class="eyebrow">THE JOURNEY</p><div class="career-step"><span>WHERE IT STARTED</span><strong>Web<br>Developer.</strong></div><div class="career-step"><span>GROWING THE CRAFT</span><strong>Senior<br>Developer.</strong></div><div class="career-step"><span>OWNING THE BIG PICTURE</span><strong>Software<br>Architect.</strong></div><p>Successive promotions at DesignStudio Network.<br>Still hands-on. Still building.</p></div>
-      <div class="about-copy reveal"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Curiosity built in.<br>Ownership, too.</h2><p>I’m Juan, a software architect and hands-on developer with 14+ years of experience bringing web applications, APIs, and multi-tenant platforms to life.</p><p>At DesignStudio Network, I grew from web developer to software architect. Today I connect the dots between discovery, design, code, infrastructure, and production support.</p><p>My work spans national nonprofits, including the American Red Cross, and enterprise brands. I care about the details: accessibility, performance, reliable tests, and helping the people around me build better.</p><div class="career"><span>2014 - Present</span><strong>Software Architect</strong><span>DesignStudio Network</span></div><div class="career"><span>2010 - 2015</span><strong>PHP / WordPress Developer</strong><span>Eco Tek Solutions & CSEA 471</span></div><a class="text-link" href="assets/Juan-Tamayo-Resume.pdf" download>Download my full resume <span aria-hidden="true">↓</span></a></div>
-    </div></section>
-    <section id="contact" class="contact section-pad wrap">
-      <p class="eyebrow reveal">HAVE SOMETHING IN MIND?</p><h2 class="reveal">Let’s make<br>something <em>work.</em></h2>
-      <div class="contact-layout">
-        <div class="contact-intro"><p>A new product, a better platform,<br>or a challenge worth solving.</p><p>Tell me a little about what you have in mind.</p></div>
-        <form class="contact-form" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p class="form-trap" hidden><label>Leave this field empty <input name="bot-field" autocomplete="off" tabindex="-1"></label></p>
-          <div class="form-row">
-            <div class="form-field"><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required maxlength="120"></div>
-            <div class="form-field"><label for="contact-email">Your email</label><input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
-          </div>
-          <div class="form-field"><label for="contact-message">What are you working on?</label><textarea id="contact-message" name="message" rows="5" required minlength="10" maxlength="5000" aria-describedby="contact-privacy"></textarea></div>
-          <p class="form-note" id="contact-privacy">Your details are used to reply to your message. Submissions are processed by Netlify.</p>
-          <button class="button primary" type="submit">Send message <span aria-hidden="true">↗</span></button>
-          <p id="contact-status" class="form-note" role="status"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-  <footer class="wrap"><a class="identity" href="#top" aria-label="Juan Tamayo, back to top"><img src="assets/logo-transparent-small.webp" width="40" height="40" alt="" loading="lazy" decoding="async"><span>tamayo<span class="accent">.</span></span></a><p>© <span id="year">2026</span> Juan Tamayo</p><div><a href="https://github.com/juan-tamayo" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/jctamayo" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="assets/Juan-Tamayo-Resume.pdf" download>Resume ↓</a></div></footer>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="dock" aria-label="Main">
+  <a href="#top" class="dock-logo" aria-label="Back to top"><img src="assets/logo-128.png" width="28" height="28" alt=""><span>Home</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <a href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>About</span></a>
+  <a href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Work</span></a>
+  <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM9 7V4h6v3"/></svg><span>Experience</span></a>
+  <a href="#ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/></svg><span>AI workflow</span></a>
+  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Contact</span></a>
+  <span class="sep" aria-hidden="true"></span>
+  <span class="dock-lang" role="group" aria-label="Language">
+    <span aria-current="true" lang="en">EN</span>
+    <span class="dock-lang-sep" aria-hidden="true">|</span>
+    <a href="/es/" hreflang="es" lang="es" data-lang="es" title="Español">ES</a>
+  </span>
+  <button id="theme" type="button" aria-label="Switch to dark mode"><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span class="tip" aria-hidden="true">Theme</span></button>
+  <a href="assets/Juan-Tamayo-Resume.pdf" class="dock-cta" download>Resume<span class="tip" aria-hidden="true">Download PDF</span></a>
+</nav>
+
+<main id="main">
+<header class="hero" id="top">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-top">
+    <a href="#top" class="brand in" aria-label="Juan Tamayo home"><img src="assets/logo-128.png" width="34" height="34" alt=""></a>
+    <p class="badge in"><span class="dot"></span> Open to remote senior roles</p>
+    <p class="loc in">San Diego, CA</p>
+    <button type="button" class="origins in" aria-expanded="false" aria-label="American &amp; Mexican" title="American &amp; Mexican">
+      <span class="origins-flags" aria-hidden="true">
+        <svg class="flag" viewBox="0 0 60 32" width="22" height="12" focusable="false"><rect width="60" height="32" rx="2" fill="#b22234"/><rect y="2.46" width="60" height="2.46" fill="#fff"/><rect y="7.38" width="60" height="2.46" fill="#fff"/><rect y="12.31" width="60" height="2.46" fill="#fff"/><rect y="17.23" width="60" height="2.46" fill="#fff"/><rect y="22.15" width="60" height="2.46" fill="#fff"/><rect y="27.08" width="60" height="2.46" fill="#fff"/><rect width="24" height="17.23" fill="#3c3b6e"/></svg>
+        <svg class="flag" viewBox="0 0 60 32" width="22" height="12" focusable="false"><rect width="20" height="32" fill="#006847"/><rect x="20" width="20" height="32" fill="#fff"/><rect x="40" width="20" height="32" fill="#ce1126"/><rect width="60" height="32" rx="2" fill="none" stroke="rgba(0,0,0,.12)"/></svg>
+        <span class="flag-emoji">🇺🇸🇲🇽</span>
+      </span>
+      <span class="origins-tip" role="tooltip">American &amp; Mexican</span>
+    </button>
+  </div>
+  <h1 class="hero-title" aria-label="Juan Tamayo">
+    <span class="line"><span>Juan</span></span>
+    <span class="line"><span>Tamayo</span></span>
+  </h1>
+  <figure class="hero-photo">
+    <span class="sweep" aria-hidden="true"></span><img id="portrait-img" src="assets/juan.webp" srcset="assets/juan-sm.webp 500w, assets/juan.webp 1000w" sizes="(max-width: 800px) 90vw, 45vw" width="1100" height="875" alt="Black and white portrait of Juan Tamayo smiling, in a fleece jacket">
+  </figure>
+  <div class="hero-side left in">
+    <p class="kicker">Senior PHP &amp; Laravel Engineer</p>
+    <p>I design and build Laravel platforms, APIs and WordPress systems that keep working long after launch.</p>
+    <blockquote class="hero-quote"><p>“I was burning while you came blaming me for the smell of ashes.”</p></blockquote>
+  </div>
+  <div class="hero-side right in">
+    <div class="cta-group">
+      <a class="cta cta-primary magnetic" href="#contact"><span class="cta-label">Let’s talk</span><span class="cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="cta cta-ghost magnetic" href="#work"><span class="cta-label">See my work</span><span class="cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>PHP</span><i>✦</i><span>Laravel</span><i>✦</i><span>Vue.js</span><i>✦</i><span>WordPress</span><i>✦</i><span>REST APIs</span><i>✦</i><span>MySQL</span><i>✦</i><span>Docker</span><i>✦</i><span>AI-assisted</span><i>✦</i><span>Cursor</span><i>✦</i><span>Claude Code</span><i>✦</i><span>Codex</span><i>✦</i>
+    <span>PHP</span><i>✦</i><span>Laravel</span><i>✦</i><span>Vue.js</span><i>✦</i><span>WordPress</span><i>✦</i><span>REST APIs</span><i>✦</i><span>MySQL</span><i>✦</i><span>Docker</span><i>✦</i><span>AI-assisted</span><i>✦</i><span>Cursor</span><i>✦</i><span>Claude Code</span><i>✦</i><span>Codex</span><i>✦</i>
+  </div>
+</div>
+
+<section class="about wrap" id="about">
+  <p class="eyebrow reveal">About</p>
+  <h2 class="statement reveal">Fourteen years of turning messy requirements into <em>software people rely on</em>, from first commit to the 3 a.m. fix.</h2>
+  <div class="about-grid">
+    <p class="reveal">I’m Juan, a self-taught engineer who grew from web developer to software architect at DesignStudio Network over twelve years. I like owning the whole problem: the data model, the API, the deploy pipeline, and the runbook the next person reads.</p>
+    <ul class="stats">
+      <li class="reveal"><strong data-count="14">14</strong><span>+ years shipping PHP</span></li>
+      <li class="reveal"><strong data-count="300">300</strong><span>+ WordPress sites on one platform</span></li>
+      <li class="reveal"><strong data-count="30">30</strong><span>% lower hosting bill after migration</span></li>
+      <li class="reveal"><strong data-count="6">6</strong><span>years as software architect</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="skills wrap" aria-labelledby="skills-h">
+  <p class="eyebrow reveal" id="skills-h">Stack</p>
+  <div class="skill-grid">
+    <div class="card reveal"><h3>Backend</h3><p>PHP 8 · Laravel · Eloquent · queues &amp; scheduling · REST APIs · MySQL · RBAC</p></div>
+    <div class="card reveal"><h3>Frontend</h3><p>Vue.js 3 · Inertia · JavaScript · HTML · CSS</p></div>
+    <div class="card reveal"><h3>WordPress</h3><p>Custom plugins · WooCommerce · WP-Cron · content at scale</p></div>
+    <div class="card reveal"><h3>Delivery</h3><p>PHPUnit · Pest · Playwright · Docker · GitHub Actions · AWS · DigitalOcean</p></div>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <p class="eyebrow reveal">Selected work</p>
+    <h2 class="big reveal scramble" id="work-h">Things I’ve <em>built</em></h2>
+  </div>
+  <div class="projects wrap">
+    <article class="project feature reveal">
+      <div class="p-num">01</div>
+      <div><p class="tag">Laravel · Vue.js · Marketplace MVP</p><h3>DesignStudio Network</h3>
+      <p>A freelancer portfolio and digital-product marketplace. I built the original WordPress proof of concept, then architected the Laravel rebuild with a Vue.js frontend and implemented the backend, doing most of the development: custom profiles, digital-product management and sales workflows, permissions and project workflows.</p>
+      <a class="link" href="https://mvp.designstudio.com" rel="noopener">mvp.designstudio.com ↗</a></div>
+      <div class="p-metric"><strong>MVP</strong><span>architect &amp; backend lead</span></div>
+    </article>
+    <article class="project feature reveal">
+      <div class="p-num">02</div>
+      <div><p class="tag">Laravel · WordPress · API</p><h3>Syndified</h3>
+      <p>A content-syndication platform and API I architected and owned for about seven years. A custom plugin turns JSON and Vue templates into pages and WooCommerce products across 300+ WordPress sites, with scheduled publishing, backups, rollback and alerts.</p></div>
+      <div class="p-metric"><strong>300+</strong><span>sites served</span></div>
+    </article>
+    <article class="project reveal">
+      <div class="p-num">03</div>
+      <div><p class="tag">Laravel · Vue · Inertia</p><h3>MNRK</h3>
+      <p>Agency operations app I built and use in my freelance work: projects, time tracking, client portals, proposals and profitability, tested with PHPUnit and Playwright.</p>
+      <a class="link" href="https://mnrkapp.com" rel="noopener">mnrkapp.com ↗</a></div>
+    </article>
+    <article class="project reveal">
+      <div class="p-num">04</div>
+      <div><p class="tag">WordPress · OAuth</p><h3>TS SMTP</h3>
+      <p>Open-source WordPress email plugin with Google/Microsoft OAuth, backup connections, encrypted credentials and delivery diagnostics. Running live on Google.</p>
+      <a class="link" href="https://github.com/juan-tamayo/ts-smtp" rel="noopener">GitHub ↗</a></div>
+    </article>
+    <article class="project reveal">
+      <div class="p-num">05</div>
+      <div><p class="tag">Laravel · Vue 3</p><h3>Tamayo Forms</h3>
+      <p>Visual form builder with conditional logic and multi-page flows that exports standalone HTML, CSS and JS.</p>
+      <a class="link" href="https://github.com/juan-tamayo/tamayo-forms" rel="noopener">GitHub ↗</a></div>
+    </article>
+    <article class="project reveal">
+      <div class="p-num">06</div>
+      <div><p class="tag">Laravel · PHP GD</p><h3>ByteSqueeze</h3>
+      <p>Self-hosted batch image optimizer: compress, resize and convert to JPEG, PNG or WebP with before/after previews and ZIP downloads.</p>
+      <a class="link" href="https://github.com/juan-tamayo/bytesqueeze" rel="noopener">GitHub ↗</a></div>
+    </article>
+  </div>
+  <div class="wrap">
+    <p class="more-work reveal"><span class="more-plus" aria-hidden="true">+</span><span><strong>400 more client projects</strong>, delivered over 12 years with DesignStudio Network agency (2014–2026) and for the American Red Cross</span></p>
+  </div>
+</section>
+
+<section class="experience wrap" id="experience" aria-labelledby="exp-h">
+  <p class="eyebrow reveal">Experience</p>
+  <h2 class="big reveal scramble" id="exp-h">The <em>journey</em></h2>
+  <ol class="timeline">
+    <li class="reveal"><time>2020 – 2026</time><div><h3>Software Architect · DesignStudio Network</h3><p>Architected Syndified and a Laravel/Vue marketplace MVP, led an AWS→DigitalOcean migration (~30% cheaper), set up Docker and GitHub Actions pipelines, mentored developers.</p></div></li>
+    <li class="reveal"><time>2016 – 2020</time><div><h3>Senior Developer · DesignStudio Network</h3><p>Built scheduled publishing, an ad-spend and hours reporting dashboard, and WooCommerce ERP/CRM integrations.</p></div></li>
+    <li class="reveal"><time>2014 – 2016</time><div><h3>Web Developer · DesignStudio Network</h3><p>Client applications, WordPress plugins and long-term maintenance.</p></div></li>
+    <li class="reveal"><time>2010 – 2014</time><div><h3>Web Developer · Eco Tek Solutions &amp; CSEA 471</h3><p>Custom PHP/MySQL apps, an auction platform with proxy bidding, and member websites.</p></div></li>
+  </ol>
+</section>
+
+<section class="ai" id="ai" aria-labelledby="ai-h">
+  <div class="wrap">
+    <p class="eyebrow reveal">AI-assisted workflow</p>
+    <h2 class="big reveal scramble" id="ai-h">Faster with AI. <em>Accountable</em> for every line.</h2>
+
+    <div class="term reveal" role="img" aria-label="Example AI pair-programming session in MNRK: a prompt asks for a queued job that emails clients their weekly time report, the AI proposes a diff, and tests pass after review.">
+      <div class="term-bar"><span></span><span></span><span></span><b>claude-code — ~/code/mnrk</b></div>
+      <pre id="term-out" aria-hidden="true"></pre>
+    </div>
+    <div class="toolkit">
+      <article class="tool reveal"><div class="tool-ic" aria-hidden="true">⌘</div><h3>Cursor</h3><p>In-editor pairing for multi-file refactors and fast iteration on Laravel and Vue code.</p></article>
+      <article class="tool reveal"><div class="tool-ic" aria-hidden="true">✳</div><h3>Claude Code</h3><p>Terminal agent for planning, implementing and testing features end to end.</p></article>
+      <article class="tool reveal"><div class="tool-ic" aria-hidden="true">◎</div><h3>Codex</h3><p>Parallel tasks and second-opinion reviews on pull requests.</p></article>
+      <article class="tool reveal"><div class="tool-ic" aria-hidden="true">✓</div><h3>Human review</h3><p>Every diff read, tested with PHPUnit and Playwright, and owned by me.</p></article>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span>1</span><h3>Spec</h3><p>Define the plan and expected behavior before any code is generated.</p></div>
+      <div class="step reveal"><span>2</span><h3>Build</h3><p>Pair with Cursor, Claude Code and Codex for implementation and refactors.</p></div>
+      <div class="step reveal"><span>3</span><h3>Review</h3><p>Read every diff, run PHPUnit and Playwright, and debug what the tools miss.</p></div>
+      <div class="step reveal"><span>4</span><h3>Ship</h3><p>CI on GitHub Actions, then a deploy I can roll back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact wrap" id="contact" aria-labelledby="contact-h">
+  <p class="eyebrow reveal">Contact</p>
+  <h2 class="huge reveal" id="contact-h">Let’s build <em>something</em>.</h2>
+  <p class="reveal">Hiring a senior Laravel or full-stack engineer? I’d like to hear about the role.</p>
+  <form action="/thanks" class="contact-form reveal" method="POST" name="contact" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="form-trap" hidden><label>Leave this field empty <input name="bot-field" autocomplete="off" tabindex="-1"></label></p>
+    <div class="form-row">
+      <div class="form-field"><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required maxlength="120"></div>
+      <div class="form-field"><label for="contact-email">Your email</label><input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+    </div>
+    <div class="form-field"><label for="contact-message">What are you working on?</label><textarea id="contact-message" name="message" rows="5" required minlength="10" maxlength="5000" aria-describedby="contact-privacy"></textarea></div>
+    <p class="form-note" id="contact-privacy">Your details are used to reply to your message. Submissions are processed by Netlify.</p>
+    <button class="btn" type="submit">Send message <span aria-hidden="true">↗</span></button>
+    <p id="contact-status" class="form-note" role="status"></p>
+  </form>
+  <div class="contact-links reveal">
+    <a class="pill" href="https://www.linkedin.com/in/jctamayo" rel="noopener">LinkedIn ↗</a>
+    <a class="pill" href="https://github.com/juan-tamayo" rel="noopener">GitHub ↗</a>
+    <a class="pill" href="assets/Juan-Tamayo-Resume.pdf" download>Resume (PDF) ↓</a>
+  </div>
+</section>
+</main>
+<footer class="wrap foot"><span class="foot-brand"><img src="assets/logo-128.png" width="22" height="22" alt="">© 2026 Juan Carlos Tamayo</span><span>Built by hand, reviewed line by line.</span></footer>
 </body>
 </html>

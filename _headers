@@ -6,8 +6,8 @@
 /assets/*
   Cache-Control: public, max-age=604800
 
-/style.css
+/assets/style.css
   Cache-Control: public, max-age=0, must-revalidate
 
-/script.js
+/assets/main.js
   Cache-Control: public, max-age=0, must-revalidate
