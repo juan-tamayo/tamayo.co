@@ -252,8 +252,17 @@ em{color:var(--acc)}
 .dock-lang a:hover,.dock-lang a:focus-visible{background:transparent!important;transform:none!important;color:#ffb08a}
 .dock-lang [aria-current]{color:#ffb08a}
 .dock-lang-sep{opacity:.4;font-weight:400}
-.identity-line{margin-top:12px!important;color:var(--ink)!important;font-weight:500}
-.about-grid>div p{color:var(--mute);font-size:18px;margin:0}
-.about-grid>div p+p{margin-top:16px}
 @media (max-width:520px){.dock-lang{padding:0 6px;font-size:11px;letter-spacing:.04em;gap:4px}}
 @media (max-width:420px){.dock .dock-logo,.dock .sep{display:none}.dock-cta{padding:0 8px;font-size:12px}}
+
+.origins{all:unset;position:relative;display:inline-flex;align-items:center;cursor:help;padding:5px 6px;border-radius:8px;z-index:4}
+.origins:hover,.origins:focus-visible,.origins[aria-expanded=true]{background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.origins:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.origins-flags{display:flex;align-items:center;gap:5px}
+.origins .flag{display:block;width:22px;height:12px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 14%,transparent)}
+.origins .flag-emoji{display:none;font-size:14px;line-height:1;letter-spacing:2px}
+.origins-flags:not(:has(svg)) .flag-emoji{display:inline}
+.origins-tip{position:absolute;top:calc(100% + 10px);right:0;background:#161514;color:#f7f4ee;border:1px solid rgba(255,255,255,.18);font:600 12.5px/1 var(--sans);padding:8px 11px;border-radius:8px;white-space:nowrap;opacity:0;transform:translateY(6px);pointer-events:none;transition:.2s;box-shadow:0 8px 22px rgba(0,0,0,.22);z-index:6}
+[data-mode=dark] .origins-tip{background:#f7f4ee;color:#161514;border-color:rgba(0,0,0,.15)}
+.origins:hover .origins-tip,.origins:focus-visible .origins-tip,.origins[aria-expanded=true] .origins-tip{opacity:1;transform:none}
+@media (max-width:900px){.origins{margin-left:auto}}

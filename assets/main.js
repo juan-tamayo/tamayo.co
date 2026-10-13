@@ -13,6 +13,16 @@ const ui = pageLang === 'es' ? {
 document.querySelectorAll('[data-lang]').forEach(link => {
   link.addEventListener('click', () => { try { localStorage.setItem('tamayo-lang', link.dataset.lang); } catch {} });
 });
+const origins = document.querySelector('.origins');
+if (origins) {
+  const closeOrigins = () => origins.setAttribute('aria-expanded', 'false');
+  origins.addEventListener('click', event => {
+    event.stopPropagation();
+    origins.setAttribute('aria-expanded', String(origins.getAttribute('aria-expanded') !== 'true'));
+  });
+  document.addEventListener('click', closeOrigins);
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeOrigins(); });
+}
 const isDark = () => (root.dataset.theme || (mq.matches ? 'dark' : 'light')) === 'dark';
 const syncTheme = () => { root.dataset.mode = isDark() ? 'dark' : 'light'; const b = document.getElementById('theme'); if (b) b.setAttribute('aria-label', isDark() ? ui.themeLight : ui.themeDark); };
 syncTheme(); mq.addEventListener('change', syncTheme);
