@@ -4,6 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#222424">
+  <script>
+    try {
+      var saved = localStorage.getItem('tamayo-lang');
+      var onEs = /^\/es(\/|$)/.test(location.pathname);
+      if (!saved && /^es\b/i.test(navigator.language || '')) {
+        saved = 'es';
+        localStorage.setItem('tamayo-lang', 'es');
+      }
+      if (location.protocol !== 'file:') {
+        if (saved === 'es' && !onEs) location.replace('/es/' + location.search + location.hash);
+        else if (saved === 'en' && onEs) location.replace('/' + location.search + location.hash);
+      }
+    } catch (e) {}
+  </script>
   <title>Juan Tamayo | Senior PHP & Laravel Engineer, San Diego</title>
   <meta name="description" content="Juan Tamayo is a senior PHP and Laravel engineer in San Diego with 14+ years building web applications, APIs, WordPress platforms, and cloud infrastructure.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -17,6 +31,7 @@
   <meta property="og:image:height" content="576">
   <meta property="og:image:alt" content="Juan Tamayo's cyan geometric logo">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
   <meta property="og:site_name" content="Juan Tamayo">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Juan Tamayo | Senior PHP & Laravel Engineer">
@@ -24,6 +39,9 @@
   <meta name="twitter:image" content="https://tamayo.co/assets/logo-transparent.png">
   <meta name="twitter:image:alt" content="Juan Tamayo's cyan geometric logo">
   <link rel="canonical" href="https://tamayo.co/">
+  <link rel="alternate" hreflang="en" href="https://tamayo.co/">
+  <link rel="alternate" hreflang="es" href="https://tamayo.co/es/">
+  <link rel="alternate" hreflang="x-default" href="https://tamayo.co/">
   <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
   <link rel="preload" href="assets/space-grotesk-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/space-grotesk-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -79,6 +97,11 @@
     <a class="dock-link" href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3"/></svg><span>About</span></a>
     <a class="dock-link" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span>Contact</span></a>
     <span class="dock-divider" aria-hidden="true"></span>
+    <span class="dock-lang" role="group" aria-label="Language">
+      <span aria-current="true" lang="en">EN</span>
+      <span class="dock-lang-sep" aria-hidden="true">|</span>
+      <a href="/es/" hreflang="es" lang="es" data-lang="es" title="Español">ES</a>
+    </span>
     <button class="dock-tool" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme">◐</button>
     <button class="dock-tool" id="motion-toggle" aria-pressed="false" aria-label="Pause animations" title="Pause animations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><span class="sr-only">Pause motion</span></button>
   </nav>
@@ -88,6 +111,7 @@
         <p class="eyebrow enter">JUAN TAMAYO / SENIOR PHP & LARAVEL ENGINEER</p>
         <h1 id="hero-title"><span class="headline-line"><span>Good ideas.</span></span><span class="headline-line"><span>Built <em>right.</em></span></span></h1>
         <p class="hero-description enter">I bring creative thinking and serious engineering together. From a first impression to the systems behind it.</p>
+        <p class="hero-identity enter">Mexican American and a US citizen, I work in English and Spanish, 20 minutes from the border.</p>
         <div class="hero-actions enter"><a class="button primary" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="assets/Juan-Tamayo-Resume.pdf" download>Get my resume <span aria-hidden="true">↓</span></a></div>
       </div>
       <div class="hero-art enter" aria-hidden="true">
@@ -132,7 +156,7 @@
     </section>
     <section id="about" class="about section-pad"><div class="wrap about-grid">
       <div class="career-path reveal"><p class="eyebrow">THE JOURNEY</p><div class="career-step"><span>WHERE IT STARTED</span><strong>Web<br>Developer.</strong></div><div class="career-step"><span>GROWING THE CRAFT</span><strong>Senior<br>Developer.</strong></div><div class="career-step"><span>OWNING THE BIG PICTURE</span><strong>Software<br>Architect.</strong></div><p>Successive promotions at DesignStudio Network.<br>Still hands-on. Still building.</p></div>
-      <div class="about-copy reveal"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Curiosity built in.<br>Ownership, too.</h2><p>I’m Juan, a software architect and hands-on developer with 14+ years of experience bringing web applications, APIs, and multi-tenant platforms to life.</p><p>At DesignStudio Network, I grew from web developer to software architect. Today I connect the dots between discovery, design, code, infrastructure, and production support.</p><p>My work spans national nonprofits, including the American Red Cross, and enterprise brands. I care about the details: accessibility, performance, reliable tests, and helping the people around me build better.</p><div class="career"><span>2014 - Present</span><strong>Software Architect</strong><span>DesignStudio Network</span></div><div class="career"><span>2010 - 2015</span><strong>PHP / WordPress Developer</strong><span>Eco Tek Solutions & CSEA 471</span></div><a class="text-link" href="assets/Juan-Tamayo-Resume.pdf" download>Download my full resume <span aria-hidden="true">↓</span></a></div>
+      <div class="about-copy reveal"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Curiosity built in.<br>Ownership, too.</h2><p>Mexican American and a US citizen, I work in English and Spanish, 20 minutes from the border.</p><p>I’m Juan, a software architect and hands-on developer with 14+ years of experience bringing web applications, APIs, and multi-tenant platforms to life.</p><p>At DesignStudio Network, I grew from web developer to software architect. Today I connect the dots between discovery, design, code, infrastructure, and production support.</p><p>My work spans national nonprofits, including the American Red Cross, and enterprise brands. I care about the details: accessibility, performance, reliable tests, and helping the people around me build better.</p><div class="career"><span>2014 - Present</span><strong>Software Architect</strong><span>DesignStudio Network</span></div><div class="career"><span>2010 - 2015</span><strong>PHP / WordPress Developer</strong><span>Eco Tek Solutions & CSEA 471</span></div><a class="text-link" href="assets/Juan-Tamayo-Resume.pdf" download>Download my full resume <span aria-hidden="true">↓</span></a></div>
     </div></section>
     <section id="contact" class="contact section-pad wrap">
       <p class="eyebrow reveal">HAVE SOMETHING IN MIND?</p><h2 class="reveal">Let’s make<br>something <em>work.</em></h2>

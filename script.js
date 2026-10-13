@@ -3,12 +3,37 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const colorScheme = window.matchMedia('(prefers-color-scheme: dark)');
 const themeButton = document.querySelector('#theme-toggle');
 const motionButton = document.querySelector('#motion-toggle');
+const pageLang = (root.lang || 'en').slice(0, 2);
+const ui = pageLang === 'es' ? {
+  themeLight: 'Cambiar a tema claro',
+  themeDark: 'Cambiar a tema oscuro',
+  resumeMotion: 'Reanudar animación',
+  pauseMotion: 'Pausar animación',
+  resumeAnimations: 'Reanudar animaciones',
+  pauseAnimations: 'Pausar animaciones',
+  reducedMotion: 'El movimiento reducido sigue la preferencia de tu dispositivo',
+  localForm: 'Esta es una vista previa local. Los mensajes se pueden enviar cuando el sitio esté publicado con Netlify Forms.'
+} : {
+  themeLight: 'Switch to light theme',
+  themeDark: 'Switch to dark theme',
+  resumeMotion: 'Resume motion',
+  pauseMotion: 'Pause motion',
+  resumeAnimations: 'Resume animations',
+  pauseAnimations: 'Pause animations',
+  reducedMotion: 'Reduced motion follows your device preference',
+  localForm: 'This is a local preview. Messages can be sent after the site is deployed with Netlify Forms enabled.'
+};
+document.querySelectorAll('[data-lang]').forEach(link => {
+  link.addEventListener('click', () => {
+    try { localStorage.setItem('tamayo-lang', link.dataset.lang); } catch {}
+  });
+});
 // The local static preview has no form backend. Never imply a message was sent.
 const contactForm = document.querySelector('.contact-form');
 if (contactForm && ['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname)) {
   contactForm.addEventListener('submit', event => {
     event.preventDefault();
-    document.querySelector('#contact-status').textContent = 'This is a local preview. Messages can be sent after the site is deployed with Netlify Forms enabled.';
+    document.querySelector('#contact-status').textContent = ui.localForm;
   });
 }
 // Storage can be unavailable in privacy modes or when opened directly from disk.
@@ -18,7 +43,7 @@ try {
 } catch {}
 function updateThemeLabel() {
   const dark = root.dataset.theme ? root.dataset.theme === 'dark' : colorScheme.matches;
-  themeButton.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
+  themeButton.setAttribute('aria-label', dark ? ui.themeLight : ui.themeDark);
 }
 themeButton.addEventListener('click', () => {
   const dark = root.dataset.theme ? root.dataset.theme === 'dark' : colorScheme.matches;
@@ -30,12 +55,12 @@ colorScheme.addEventListener('change', updateThemeLabel);
 updateThemeLabel();
 function updateMotionButton() {
   const off = root.dataset.motion === 'off' || reducedMotion.matches;
-  motionButton.querySelector('span').textContent = off ? 'Resume motion' : 'Pause motion';
-  motionButton.setAttribute('aria-label', off ? 'Resume animations' : 'Pause animations');
+  motionButton.querySelector('span').textContent = off ? ui.resumeMotion : ui.pauseMotion;
+  motionButton.setAttribute('aria-label', off ? ui.resumeAnimations : ui.pauseAnimations);
   motionButton.querySelector('path').setAttribute('d', off ? 'm8 5 11 7-11 7Z' : 'M8 5v14M16 5v14');
   motionButton.setAttribute('aria-pressed', String(off));
   motionButton.disabled = reducedMotion.matches;
-  motionButton.title = reducedMotion.matches ? 'Reduced motion follows your device preference' : off ? 'Resume animations' : 'Pause animations';
+  motionButton.title = reducedMotion.matches ? ui.reducedMotion : off ? ui.resumeAnimations : ui.pauseAnimations;
 }
 motionButton.addEventListener('click', () => {
   root.dataset.motion = root.dataset.motion === 'off' ? 'on' : 'off';
